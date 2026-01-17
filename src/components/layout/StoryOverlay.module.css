@@ -1,0 +1,90 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2000;
+    background: #000;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    overscroll-behavior: contain;
+    /* Prevents scroll chaining to body */
+}
+
+.closeBtn {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 0.5rem;
+    z-index: 2001;
+    transition: background 0.3s ease;
+}
+
+.closeBtn:hover {
+    background: var(--color-primary);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+    width: 100%;
+}
+
+.mainTitle {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 6rem;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--color-primary), transparent);
+    transform: translateX(-50%);
+    opacity: 0.3;
+}
+
+.timelineItem {
+    text-align: center;
+    position: relative;
+    background: #050505;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.year {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.itemTitle {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.itemText {
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}

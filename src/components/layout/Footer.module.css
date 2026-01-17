@@ -1,0 +1,71 @@
+.footer {
+    background: var(--color-bg);
+    padding: 4rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.brand h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.dot {
+    color: var(--color-primary);
+}
+
+.brand p {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+}
+
+.links a {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #fff;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.socials a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: var(--color-primary);
+}
+
+.bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+    color: #444;
+    font-size: 0.75rem;
+}

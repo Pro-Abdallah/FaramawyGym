@@ -1,0 +1,169 @@
+.wrapper {
+    height: 400vh;
+    /* 4 Sections * 100vh */
+    position: relative;
+    background: #000;
+}
+
+.stickyContainer {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvasLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.contentLayer {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    padding: 0 2rem;
+}
+
+.indicators {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.indicator {
+    width: 40px;
+    height: 2px;
+    background: #333;
+    transition: all 0.3s ease;
+}
+
+.activeIndicator {
+    background: var(--color-primary);
+    width: 60px;
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+.textContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center visuals */
+    height: 100%;
+}
+
+.sectionContent {
+    position: absolute;
+    /* Stack them */
+    width: 100%;
+    max-width: 600px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    text-align: left;
+    padding-left: 4rem;
+}
+
+.sectionTitle {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    line-height: 1;
+}
+
+.details {
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.list li {
+    font-size: 1.5rem;
+    color: #fff;
+    border-bottom: 1px solid #333;
+    padding: 1rem 0;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    /* Context for overlay */
+}
+
+.card:hover {
+    background: rgba(255, 30, 30, 0.2);
+    border-color: var(--color-primary);
+    z-index: 20;
+}
+
+.cardImageOverlay {
+    position: absolute;
+    bottom: 110%;
+    /* Display above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 150px;
+    background: #000;
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 50;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.cardImageOverlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .contentLayer {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .sectionTitle {
+        font-size: 2.5rem;
+    }
+
+    .sectionContent {
+        padding-left: 1.5rem;
+    }
+}

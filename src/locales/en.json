@@ -1,0 +1,59 @@
+{
+    "nav": {
+        "about": "Who I Am",
+        "story": "My Story",
+        "training": "Training",
+        "results": "Results",
+        "plans": "Plans",
+        "store": "Store",
+        "join": "Start Now"
+    },
+    "hero": {
+        "subtitle": "Elite Performance Coach",
+        "headline_1": "ABDELRAHMAN",
+        "headline_2": "ALFARMAWY",
+        "description": "I don't just train bodies. I build mindsets. Join the elite circle of high-performers who refuse to settle for average.",
+        "cta_primary": "Start Transformation",
+        "cta_secondary": "View Programs"
+    },
+    "about": {
+        "subtitle": "The Architect",
+        "title": "Obsessed with Excellence",
+        "description": "With over a decade of experience forging elite physiques, I bring a scientific, no-nonsense approach to training. My mission is simple: to help you unlock the version of yourself you didn't know existed.",
+        "story_btn": "View My Journey"
+    },
+    "stats": {
+        "members": "Lives Changed",
+        "experience": "Years Exp",
+        "programs": "Programs Built",
+        "awards": "Certifications"
+    },
+    "training": {
+        "title": "Training Ground",
+        "tabs": {
+            "gyms": "Where I Coach",
+            "types": "Methodology",
+            "supplements": "Supplements",
+            "lifestyle": "Lifestyle"
+        }
+    },
+    "results": {
+        "title": "Real Results",
+        "subtitle": "Transformations"
+    },
+    "plans": {
+        "title": "Coaching Plans",
+        "toggle_monthly": "Monthly",
+        "toggle_yearly": "Commit (Yearly)"
+    },
+    "store": {
+        "title": "Digital Store",
+        "tabs": {
+            "all": "All",
+            "diet": "Diet",
+            "program": "Programs",
+            "book": "Books"
+        },
+        "cart": "Add to Cart"
+    }
+}

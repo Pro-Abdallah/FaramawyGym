@@ -1,0 +1,189 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.canvasContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.6;
+    /* Slight fade for background effect */
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+[dir="rtl"] .overlay {
+    direction: rtl;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imageContainer {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.coachImage {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.6));
+    z-index: 2;
+    position: relative;
+    /* Optional: Slight scaling for impact */
+    transform: scale(1.05);
+}
+
+.imageGlow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
+    opacity: 0.3;
+    filter: blur(60px);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.subtitle {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.headline {
+    font-size: 5rem;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.stroke {
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    position: relative;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 500px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.mouse {
+    width: 30px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: #c01515;
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        top: 8px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 25px;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .overlay {
+        grid-template-columns: 1fr;
+        padding-top: 4rem;
+        text-align: center;
+    }
+
+    .content {
+        align-items: center;
+        /* Center content in column */
+    }
+
+    .imageContainer {
+        height: 50vh;
+        order: -1;
+        /* Image on top */
+    }
+
+    .headline {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        align-items: flex-end;
+        padding-bottom: 8rem;
+    }
+}

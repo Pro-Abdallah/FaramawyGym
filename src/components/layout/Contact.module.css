@@ -1,0 +1,86 @@
+.section {
+    padding: 6rem 2rem;
+    background-color: #000;
+    background-image: radial-gradient(circle at top right, rgba(255, 30, 30, 0.1), transparent 40%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.text {
+    color: var(--color-text-muted);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.details {
+    display: grid;
+    gap: 2rem;
+}
+
+.detailItem h3 {
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.detailItem p {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.form {
+    background: var(--color-surface);
+    padding: 3rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.input,
+.textarea,
+.select {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.btn {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

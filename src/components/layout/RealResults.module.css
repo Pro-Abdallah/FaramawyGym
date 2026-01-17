@@ -1,0 +1,99 @@
+.section {
+    padding: 8rem 2rem;
+    background: #000;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.showcase {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 400px;
+    text-align: left;
+}
+
+.card h3 {
+    margin-top: 2rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.quote {
+    color: var(--color-primary);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 500px;
+    background: #222;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.5) contrast(1.2);
+    transition: filter 0.5s ease;
+}
+
+.card:hover .img {
+    filter: grayscale(0) contrast(1);
+}
+
+.beforeLabel,
+.afterLabel {
+    position: absolute;
+    top: 20px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.8rem;
+    z-index: 2;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.beforeLabel {
+    left: 20px;
+    color: var(--color-text-muted);
+}
+
+.afterLabel {
+    right: 20px;
+    color: var(--color-primary);
+}
+
+.swipeOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.card:hover .swipeOverlay {
+    transform: translateX(100%);
+}

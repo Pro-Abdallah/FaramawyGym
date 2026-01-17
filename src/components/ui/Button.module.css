@@ -1,0 +1,48 @@
+.button {
+    position: relative;
+    padding: 0.8em 2em;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    /* Slight roundness or 0 for aggressive look */
+    overflow: hidden;
+    transition: all 0.3s var(--ease-spring);
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.primary {
+    background: var(--color-primary);
+    box-shadow: 0 0 15px rgba(255, 30, 30, 0.4);
+}
+
+.primary:hover {
+    background: #ff3333;
+    box-shadow: 0 0 25px rgba(255, 30, 30, 0.6);
+}
+
+.outline {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.outline:hover {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.ghost {
+    background: transparent;
+    color: var(--color-text-muted);
+}
+
+.ghost:hover {
+    color: #fff;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
