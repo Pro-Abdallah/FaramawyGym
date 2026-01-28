@@ -6,18 +6,20 @@ import { useTranslation } from 'react-i18next';
 import TrainingScene from '../3d/TrainingScene';
 import css from './CinematicTraining.module.css';
 
-const sections = [
-    { id: 'gyms', label: 'Where I Coach' },
-    { id: 'methods', label: 'Training Types' },
-    { id: 'supplements', label: 'Supplements' },
-    { id: 'lifestyle', label: 'Lifestyle' }
-];
+
 
 const CinematicTraining = () => {
     const containerRef = useRef(null);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const isRtl = i18n.language === 'ar';
     const [activeSection, setActiveSection] = useState(0);
 
+    const sections = [
+        { id: 'gyms', key: 'gyms' },
+        { id: 'methods', key: 'methods' },
+        { id: 'supplements', key: 'supplements' },
+        { id: 'lifestyle', key: 'lifestyle' }
+    ];
 
     // Track scroll progress of the container
     const { scrollYProgress } = useScroll({
@@ -39,7 +41,7 @@ const CinematicTraining = () => {
     }, [scrollYProgress]);
 
     return (
-        <div className={css.wrapper} ref={containerRef}>
+        <div className={`${css.wrapper} ${isRtl ? css.rtl : ''}`} ref={containerRef}>
             <div className={css.stickyContainer}>
 
                 {/* 3D Background */}
@@ -74,42 +76,42 @@ const CinematicTraining = () => {
                                     transform: `translateY(${activeSection === index ? 0 : 20}px)`
                                 }}
                             >
-                                <h2 className={css.sectionTitle}>{section.label}</h2>
+                                <h2 className={css.sectionTitle}>{t(`training.sections.${section.key}.title`)}</h2>
 
                                 {/* Specific Content per Section */}
                                 {index === 0 && (
                                     <div className={css.details}>
-                                        <p>Exclusive access to top-tier facilities.</p>
+                                        <p>{t('training.sections.gyms.subtitle')}</p>
                                         <div className={css.grid}>
-                                            <HoverCard title="Powerhouse Gym" image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop" />
-                                            <HoverCard title="Gold's Gym Elite" image="https://images.unsplash.com/photo-1540497077202-09f4139/29633?q=80&w=1470&auto=format&fit=crop" />
+                                            <HoverCard title={t('training.sections.gyms.powerhouse')} image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop" />
+                                            <HoverCard title={t('training.sections.gyms.golds')} image="https://images.unsplash.com/photo-1540497077202-09f4139/29633?q=80&w=1470&auto=format&fit=crop" />
                                         </div>
                                     </div>
                                 )}
                                 {index === 1 && (
                                     <div className={css.details}>
                                         <ul className={css.list}>
-                                            <li>Hypertrophy</li>
-                                            <li>Strength & Conditioning</li>
-                                            <li>Mobility</li>
+                                            <li>{t('training.sections.methods.hypertrophy')}</li>
+                                            <li>{t('training.sections.methods.strength')}</li>
+                                            <li>{t('training.sections.methods.mobility')}</li>
                                         </ul>
                                     </div>
                                 )}
                                 {index === 2 && (
                                     <div className={css.details}>
-                                        <p>Science-backed performance enhancers.</p>
+                                        <p>{t('training.sections.supplements.subtitle')}</p>
                                         <div className={css.grid}>
-                                            <HoverCard title="Evolve Whey" image="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=1470&auto=format&fit=crop" />
-                                            <HoverCard title="RedRex Creatine" image="https://images.unsplash.com/photo-1579722821273-0f9c2d6e3c5e?q=80&w=1470&auto=format&fit=crop" />
+                                            <HoverCard title={t('training.sections.supplements.whey')} image="https://images.unsplash.com/photo-1593095948071-474c5cc2989d?q=80&w=1470&auto=format&fit=crop" />
+                                            <HoverCard title={t('training.sections.supplements.creatine')} image="https://images.unsplash.com/photo-1579722821273-0f9c2d6e3c5e?q=80&w=1470&auto=format&fit=crop" />
                                         </div>
                                     </div>
                                 )}
                                 {index === 3 && (
                                     <div className={css.details}>
-                                        <p>Beyond the gym. Books, Mindset, Recovery.</p>
+                                        <p>{t('training.sections.lifestyle.subtitle')}</p>
                                         <div className={css.grid}>
-                                            <HoverCard title="The Champion's Mind" image="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1374&auto=format&fit=crop" />
-                                            <HoverCard title="Sleep Protocol" image="https://images.unsplash.com/photo-1511296933631-18b1f0a0a50c?q=80&w=1374&auto=format&fit=crop" />
+                                            <HoverCard title={t('training.sections.lifestyle.mind')} image="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1374&auto=format&fit=crop" />
+                                            <HoverCard title={t('training.sections.lifestyle.sleep')} image="https://images.unsplash.com/photo-1511296933631-18b1f0a0a50c?q=80&w=1374&auto=format&fit=crop" />
                                         </div>
                                     </div>
                                 )}

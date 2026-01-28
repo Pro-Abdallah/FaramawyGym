@@ -1,17 +1,16 @@
 .section {
-    padding: 8rem 2rem;
-    background: var(--color-surface);
+    padding: 100px 0;
+    background: var(--color-bg);
 }
 
 .header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 60px;
 }
 
 .title {
     font-size: 3rem;
-    color: #fff;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
 }
 
 .subtitle {
@@ -20,100 +19,144 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1400px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+.durationToggle {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.durationBtn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #333;
+    color: var(--color-text-muted);
+    background: transparent;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.activeDuration {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 5px 15px rgba(255, 30, 30, 0.3);
+}
+
+.totalPrice {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: 5px;
 }
 
 .card {
-    background: var(--color-bg);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 8px;
+    background: var(--color-surface);
+    border: 1px solid #222;
+    padding: 40px;
+    border-radius: 20px;
     position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 30, 30, 0.1);
 }
 
 .popular {
     border-color: var(--color-primary);
-    box-shadow: 0 0 30px rgba(255, 30, 30, 0.05);
-    transform: scale(1.05);
-    z-index: 2;
+    background: linear-gradient(180deg, rgba(255, 30, 30, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .badge {
     position: absolute;
-    top: -12px;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
     background: var(--color-primary);
-    color: #fff;
-    padding: 4px 12px;
+    color: white;
+    padding: 5px 20px;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    text-transform: uppercase;
 }
 
 .planTitle {
-    color: #fff;
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 5px;
 }
 
 .duration {
     color: var(--color-text-muted);
     font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    margin-bottom: 30px;
 }
 
 .price {
-    font-size: 3.5rem;
-    font-weight: 900;
-    color: #fff;
-    font-family: var(--font-heading);
-    line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 30px;
+}
+
+.originalPrice {
+    text-decoration: line-through;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.currentPrice {
+    font-size: 2.5rem;
+    color: white;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
 }
 
 .currency {
-    font-size: 1.5rem;
-    vertical-align: super;
+    font-size: 1rem;
+    color: var(--color-primary);
 }
 
 .period {
     font-size: 1rem;
     color: var(--color-text-muted);
-    font-weight: 400;
 }
 
 .save {
-    color: var(--color-primary);
-    font-size: 0.875rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
+    background: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 25px;
 }
 
 .features {
     list-style: none;
-    margin-bottom: 2rem;
-    flex-grow: 1;
-    text-align: left;
-    width: 100%;
+    margin-bottom: 40px;
+    flex: 1;
 }
 
 .features li {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--color-text-muted);
-    margin-bottom: 0.8rem;
-    font-size: 0.9rem;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
 }
 
 .icon {

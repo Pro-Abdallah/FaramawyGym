@@ -35,16 +35,74 @@
             "types": "Methodology",
             "supplements": "Supplements",
             "lifestyle": "Lifestyle"
+        },
+        "sections": {
+            "gyms": {
+                "title": "Where I Coach",
+                "subtitle": "Exclusive access to top-tier facilities.",
+                "powerhouse": "Powerhouse Gym",
+                "golds": "Gold's Gym Elite"
+            },
+            "methods": {
+                "title": "Training Types",
+                "hypertrophy": "Hypertrophy",
+                "strength": "Strength & Conditioning",
+                "mobility": "Mobility"
+            },
+            "supplements": {
+                "title": "Supplements",
+                "subtitle": "Science-backed performance enhancers.",
+                "whey": "Evolve Whey",
+                "creatine": "RedRex Creatine"
+            },
+            "lifestyle": {
+                "title": "Lifestyle",
+                "subtitle": "Beyond the gym. Books, Mindset, Recovery.",
+                "mind": "The Champion's Mind",
+                "sleep": "Sleep Protocol"
+            }
         }
     },
     "results": {
         "title": "Real Results",
-        "subtitle": "Transformations"
+        "subtitle": "Transformations",
+        "before": "Before",
+        "after": "After",
+        "drag_hint": "← Drag to compare →"
     },
     "plans": {
         "title": "Coaching Plans",
+        "subtitle": "Invest in yourself. Proven results.",
         "toggle_monthly": "Monthly",
-        "toggle_yearly": "Commit (Yearly)"
+        "toggle_yearly": "Commit (Yearly)",
+        "best_value": "Best Value",
+        "select": "Select",
+        "save": "Save",
+        "month": "Month",
+        "months": "Months",
+        "per_month": "/mo",
+        "plan_titles": {
+            "kickstart": "Kickstart",
+            "transformation": "Transformation",
+            "lifestyle": "Lifestyle",
+            "elite_year": "Elite Year"
+        },
+        "features": {
+            "custom_training": "Custom Training Plan",
+            "weekly_checkins": "Weekly Check-ins",
+            "nutrition_guidelines": "Nutrition Guidelines",
+            "daily_support": "Daily Support",
+            "advanced_nutrition": "Advanced Nutrition",
+            "form_analysis": "Form Analysis",
+            "everything_3month": "Everything in 3 Month",
+            "video_calls": "Video Calls",
+            "supplement_protocol": "Supplement Protocol",
+            "travel_adjustments": "Travel Adjustments",
+            "vip_access": "Full VIP Access",
+            "priority_response": "Priority Response",
+            "free_merch": "Free Merch",
+            "quarterly_meetups": "Quarterly Meetups"
+        }
     },
     "store": {
         "title": "Digital Store",
@@ -55,5 +113,39 @@
             "book": "Books"
         },
         "cart": "Add to Cart"
+    },
+    "reels": {
+        "title": "Training Reels",
+        "video_titles": {
+            "reel_1": "My Triceps Workout Review 🤷‍♂️ What's Yours?",
+            "reel_2": "My Shoulder Workout Review 💪 What's Yours?!",
+            "reel_3": "The Truth About Natural Bodybuilding Championships",
+            "reel_4": "One of the Best Shoulder Exercises That Helped My Growth",
+            "reel_5": "The Solution if Your Chest is Weak 😉",
+            "reel_6": "How Old Were You When You Realized Lateral Raises Aren't Just for Shoulders!?",
+            "reel_7": "Lateral Delts!? This Exercise is All You Need 💪",
+            "reel_8": "Why I'm Against 'Sophisticated' Exercises?!",
+            "reel_9": "My Chest Workout Review 🤷‍♂️ What's Yours?",
+            "reel_10": "My Review of Sophisticated Exercises 😂 What's Your Rating? 🤔"
+        }
+    },
+    "subscription": {
+        "title": "Complete Your Profile",
+        "subtitle": "Help us personalize your transformation journey",
+        "back": "Back to Plans",
+        "weight": "Current Weight",
+        "height": "Height",
+        "goal": "Your Goal",
+        "goals": {
+            "muscle_gain": "Muscle Gain",
+            "weight_loss": "Weight Loss",
+            "body_composition": "Body Composition"
+        },
+        "confirm": "Confirm & Contact Coach",
+        "errors": {
+            "weight": "Please enter a valid weight",
+            "height": "Please enter a valid height",
+            "goal": "Please select your fitness goal"
+        }
     }
 }

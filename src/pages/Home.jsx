@@ -5,13 +5,11 @@ import Hero from '../components/layout/Hero';
 import About from '../components/layout/About';
 import StoryOverlay from '../components/layout/StoryOverlay';
 import CoachingPlans from '../components/layout/CoachingPlans';
-import CinematicTraining from '../components/layout/CinematicTraining';
-import Contact from '../components/layout/Contact';
-import Footer from '../components/layout/Footer';
 import RealResults from '../components/layout/RealResults';
-import Store from '../components/layout/Store';
-
-// Global3DScene removed
+import TrainingGround from '../components/layout/TrainingGround';
+import MealPlans from '../components/layout/MealPlans';
+import Partnership from '../components/layout/Partnership';
+import Footer from '../components/layout/Footer';
 
 const Home = () => {
     const [storyOpen, setStoryOpen] = useState(false);
@@ -20,12 +18,12 @@ const Home = () => {
         <div className="home-container" style={{ position: 'relative' }}>
             <Navbar />
             <Hero />
-            <About onOpenStory={() => setStoryOpen(true)} />
-            <CinematicTraining />
             <RealResults />
+            <TrainingGround />
+            <MealPlans />
             <CoachingPlans />
-            <Store />
-            <Contact />
+            <Partnership />
+            <About onOpenStory={() => setStoryOpen(true)} />
             <Footer />
             <AnimatePresence>
                 {storyOpen && <StoryOverlay onClose={() => setStoryOpen(false)} />}

@@ -14,12 +14,10 @@ const Navbar = () => {
     const location = useLocation();
 
     const navLinks = [
-        { name: t('nav.about'), href: '/#about', type: 'anchor' },
-        { name: t('nav.story'), href: '/#story', type: 'anchor' }, // This connects to overlay in Home
-        { name: t('nav.training'), href: '/#training', type: 'anchor' },
-        { name: t('nav.results'), href: '/#results', type: 'anchor' },
-        { name: t('nav.plans'), href: '/plans', type: 'route' },
-        { name: t('nav.store'), href: '/#store', type: 'anchor' },
+        { name: 'Training Splits', href: '/#splits', type: 'anchor' },
+        { name: 'Diet Plans', href: '/#diet', type: 'anchor' },
+        { name: 'Results', href: '/#results', type: 'anchor' },
+        { name: 'Coaching', href: '/#plans', type: 'anchor' },
     ];
 
     useEffect(() => {
@@ -39,12 +37,10 @@ const Navbar = () => {
         if (link.type === 'route') {
             navigate(link.href);
         } else {
-            // If on home page, scroll
             if (location.pathname === '/') {
                 const element = document.querySelector(link.href.replace('/', ''));
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
             } else {
-                // Navigate home then scroll (simple implementation)
                 navigate('/');
                 setTimeout(() => {
                     const element = document.querySelector(link.href.replace('/', ''));
@@ -65,7 +61,7 @@ const Navbar = () => {
             >
                 <div className={css.container}>
                     <Link to="/" className={css.logo}>
-                        COACH<span className={css.dot}>.</span>X
+                        FARAMAWY<span className={css.dot}></span>
                     </Link>
 
                     <div className={css.desktopMenu}>
@@ -102,7 +98,7 @@ const Navbar = () => {
                         transition={{ type: 'tween', duration: 0.3 }}
                     >
                         <div className={css.mobileHeader}>
-                            <div className={css.logo}>COACH.X</div>
+                            <div className={css.logo}>FARAMAWY</div>
                             <button onClick={() => setMobileMenuOpen(false)}>
                                 <X color="#fff" />
                             </button>

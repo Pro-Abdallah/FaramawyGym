@@ -1,0 +1,41 @@
+.loaderContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.iconContainer {
+    width: 120px;
+    height: 120px;
+    color: var(--color-primary);
+    filter: drop-shadow(0 0 10px var(--color-primary));
+}
+
+.svgIcon {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.text {
+    margin-top: 2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.highlight {
+    color: var(--color-primary);
+    text-shadow: 0 0 15px var(--color-primary);
+}

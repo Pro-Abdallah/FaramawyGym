@@ -1,0 +1,583 @@
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    background: #000;
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: #050505;
+    border-right: 1px solid #111;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: var(--color-primary);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.navBtn,
+.navBtnActive {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border: none;
+    background: transparent;
+    color: #666;
+    cursor: pointer;
+    text-align: left;
+}
+
+.navBtnActive {
+    background: rgba(255, 30, 30, 0.1);
+    color: var(--color-primary);
+}
+
+.navBtn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #444;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+/* Main Content */
+.main {
+    flex: 1;
+    margin-left: 280px;
+    padding: 60px;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.header h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.statItem {
+    background: #080808;
+    border: 1px solid #111;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.statItem div {
+    display: flex;
+    flex-direction: column;
+}
+
+.statItem span {
+    color: #666;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.statItem strong {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+/* Table Section */
+.tableSection {
+    background: #080808;
+    border: 1px solid #111;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.tableHeader {
+    padding: 25px 30px;
+    border-bottom: 1px solid #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #000;
+    padding: 10px 20px;
+    border: 1px solid #222;
+    border-radius: 12px;
+    width: 300px;
+}
+
+.search input {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 0.9rem;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding: 20px 30px;
+    font-size: 0.8rem;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: #0a0a0a;
+}
+
+.table td {
+    padding: 20px 30px;
+    border-bottom: 1px solid #0f0f0f;
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.clickableRow:hover {
+    background: #0d0d0d;
+    cursor: pointer;
+}
+
+.serviceTag {
+    color: white;
+    font-weight: 600;
+    background: #111;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.statusBadge {
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.pending {
+    background: rgba(255, 165, 0, 0.1);
+    color: #FFA500;
+}
+
+.processing {
+    background: rgba(30, 144, 255, 0.1);
+    color: #1E90FF;
+}
+
+.done {
+    background: rgba(0, 255, 127, 0.1);
+    color: #00FF7F;
+}
+
+.reviewBtn {
+    background: #111;
+    color: white;
+    border: 1px solid #222;
+    padding: 8px 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal {
+    width: 70%;
+    height: 100vh;
+    background: #050505;
+    border-left: 1px solid #111;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalHeader {
+    padding: 40px;
+    border-bottom: 1px solid #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.modalHeader h3 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.modalSubtitle {
+    color: var(--color-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.closeBtn {
+    background: #111;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.modalContent {
+    flex: 1;
+    overflow-y: auto;
+    padding: 40px;
+}
+
+.modalGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.infoSection h4,
+.mediaSection h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #444;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #111;
+    padding-bottom: 10px;
+}
+
+/* Login Container */
+.loginContainer {
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.loginBg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, #111 0%, #000 100%);
+    z-index: 1;
+}
+
+.loginGlow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 30, 30, 0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+}
+
+.loginCard {
+    position: relative;
+    z-index: 2;
+    background: rgba(8, 8, 8, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid #111;
+    padding: 50px;
+    border-radius: 30px;
+    width: 440px;
+    text-align: center;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.loginHeader {
+    margin-bottom: 40px;
+}
+
+.loginIcon {
+    width: 70px;
+    height: 70px;
+    background: #FF1E1E;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(255, 30, 30, 0.3);
+}
+
+.loginHeader h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+.loginHeader span {
+    color: #444;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inputWrapper {
+    background: #000;
+    border: 1px solid #1a1a1a;
+    border-radius: 12px;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.inputWrapper:focus-within {
+    border-color: #FF1E1E;
+}
+
+.inputWrapper input {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    text-align: center;
+}
+
+.loginSubmit {
+    width: 100%;
+    height: 55px;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.loginFooter {
+    margin-top: 40px;
+    font-size: 0.7rem;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.biometricGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.bioItem {
+    background: #0a0a0a;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.bioItem span {
+    display: block;
+    font-size: 0.7rem;
+    color: #444;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.healthItem {
+    margin-bottom: 20px;
+}
+
+.healthItem label {
+    display: block;
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.healthItem p {
+    color: white;
+    font-weight: 500;
+}
+
+.imageGallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.galleryItem label {
+    display: block;
+    font-size: 0.75rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.galleryItem img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid #111;
+}
+
+.modalFooter {
+    padding: 40px;
+    background: #080808;
+    border-top: 1px solid #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statusActions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.statusActions label {
+    font-size: 0.75rem;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.statusBtns {
+    display: flex;
+    gap: 10px;
+}
+
+.statusBtn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: #111;
+    border: 1px solid #222;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activePending {
+    background: rgba(255, 165, 0, 0.2);
+    border-color: #FFA500;
+    color: #FFA500;
+}
+
+.activeProcessing {
+    background: rgba(30, 144, 255, 0.2);
+    border-color: #1E90FF;
+    color: #1E90FF;
+}
+
+.activeDone {
+    background: rgba(0, 255, 127, 0.2);
+    border-color: #00FF7F;
+    color: #00FF7F;
+}
+
+.primaryActions {
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 1200px) {
+    .modal {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .modalGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 80px;
+        padding: 20px 10px;
+    }
+
+    .main {
+        margin-left: 80px;
+        padding: 30px;
+    }
+
+    .logo,
+    .navBtn span,
+    .logout span {
+        display: none;
+    }
+}

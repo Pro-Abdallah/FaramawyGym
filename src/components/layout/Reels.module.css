@@ -1,0 +1,122 @@
+.section {
+    padding: 6rem 0;
+    background: #111;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.title {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Card styles moved to ReelCard.module.css */
+
+/* ... Modal Styles ... */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+}
+
+.modalContent {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    aspect-ratio: auto;
+    background: #000;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iframeContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalVideo {
+    /* Enforce 9:16 Aspect Ratio Logic */
+    width: auto;
+    height: 100%;
+    aspect-ratio: 9 / 16;
+    max-width: 100%;
+    max-height: 90vh;
+    /* Leave some room for close button/UI if needed */
+    border: none;
+    border-radius: 12px;
+    /* Soften edges like a phone screen */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Ensure title is visible over full screen video */
+.modalContent .infoOverlay {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    background: transparent;
+    z-index: 20;
+    pointer-events: none;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    backdrop-filter: blur(5px);
+}
+
+.closeButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Swiper Customization */
+.swiperContainer {
+    width: 100%;
+    padding: 2rem 0;
+    overflow: visible;
+    position: relative;
+}
+
+:global(.swiper-wrapper) {
+    transition-timing-function: linear !important;
+}

@@ -8,8 +8,8 @@ const Footer = () => {
             <div className={css.container}>
                 <div className={css.top}>
                     <div className={css.brand}>
-                        <h2>FARMFIT<span className={css.dot}>.</span></h2>
-                        <p>Forging elite bodies since 2024.</p>
+                        <h2>FARAMAWY<span className={css.dot}>.</span></h2>
+                        <p>Forging elite bodies since 2020.</p>
                     </div>
 
                     <div className={css.links}>
@@ -19,15 +19,13 @@ const Footer = () => {
                     </div>
 
                     <div className={css.socials}>
-                        <a href="#"><Facebook size={20} /></a>
-                        <a href="#"><Twitter size={20} /></a>
                         <a href="#"><Instagram size={20} /></a>
                         <a href="#"><Youtube size={20} /></a>
                     </div>
                 </div>
 
                 <div className={css.bottom}>
-                    <p>&copy; {new Date().getFullYear()} FarmFit. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Faramawy. All rights reserved.</p>
                 </div>
             </div>
         </footer>

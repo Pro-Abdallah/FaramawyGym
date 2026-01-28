@@ -1,0 +1,302 @@
+.page {
+    min-height: 100vh;
+    background: var(--color-bg);
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.progressBarContainer {
+    margin-bottom: 40px;
+}
+
+.progressLabels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.stepLabel {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+}
+
+.activeLabel {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 15px rgba(255, 30, 30, 0.3);
+}
+
+.progressBar {
+    height: 4px;
+    background: var(--color-surface);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--color-primary);
+}
+
+.formCard {
+    background: var(--color-surface);
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 30px;
+    min-height: 400px;
+}
+
+.stepContent h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--color-text);
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.inputGroup input:focus {
+    border-color: var(--color-primary);
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.imageGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.uploadBox {
+    margin-bottom: 20px;
+}
+
+.uploadBox label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.previewContainer {
+    height: 150px;
+    border: 2px dashed #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.dropzone {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 8px;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.previewWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.previewWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.previewWrapper button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 30, 30, 0.9);
+    color: white;
+    font-size: 0.75rem;
+    padding: 5px;
+}
+
+.radioGroup {
+    display: flex;
+    gap: 10px;
+}
+
+.radioGroup button {
+    flex: 1;
+    padding: 10px;
+    background: #000;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 6px;
+}
+
+.radioGroup button.active {
+    border-color: var(--color-primary);
+    background: rgba(255, 30, 30, 0.1);
+}
+
+.preferenceGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.prefBtn {
+    padding: 10px;
+    background: #000;
+    border: 1px solid #333;
+    color: var(--color-text-muted);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.prefBtnActive {
+    border-color: var(--color-primary);
+    background: rgba(255, 30, 30, 0.1);
+    color: white;
+}
+
+.paymentMethods {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.methodCard {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.activeMethod {
+    border-color: var(--color-primary);
+    background: rgba(255, 30, 30, 0.1);
+}
+
+.amountBox {
+    background: #000;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.amountBox h3 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin: 10px 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    border-top: 1px solid #222;
+    padding-top: 20px;
+}
+
+.nextBtn {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.backBtn {
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.successStep {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.successStep h2 {
+    margin: 20px 0 10px;
+}
+
+.successStep p {
+    color: var(--color-text-muted);
+    margin-bottom: 30px;
+}
+
+.error {
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
+@media (max-width: 600px) {
+
+    .grid2,
+    .imageGrid {
+        grid-template-columns: 1fr;
+    }
+}
